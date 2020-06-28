@@ -1,0 +1,189 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    html {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+     
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background: url('../images/bg-mobile.svg') no-repeat #0c122c;
+      background-size: cover;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .container {
+      min-width: 375px;
+      box-sizing: border-box; 
+    }
+    .logo{
+      align-self: flex-start;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+    .buttons {
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 1rem;  
+      width: 50%;
+      justify-content: space-between;
+    }
+    .actions {
+      background-color: #1e2c69;
+      border-radius: .7rem 9.6rem .7rem .7rem;
+      padding: 1.8rem 9.5rem 1.8rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; 
+    }
+    .storage {
+      width: 100%;
+      border-radius: .7rem;
+      background-color: #1e2c69;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 2.8rem;
+      font-size: 1.2rem;
+      box-sizing: border-box; 
+
+    }
+    button:focus {
+      outline: none;
+    }
+    button {
+      width: 3.7rem;
+      height: 3.7rem;
+      border-radius: .7rem;
+      background-color: #0d112d;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .progress {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .progress-bg {
+      width: 100%;
+      height: 1rem;
+      background-color: #151e49;
+      border-radius: 10rem;
+      border: 0.2rem solid #151e49;
+      margin: 1rem 0;
+    }
+   
+    p {
+      margin: 0;
+    }
+
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+    .progress-ball {
+      width: .6rem;
+      height: .6rem;
+      border-radius: 50%;
+      background-color: #fff;
+      margin-right: 0.2rem;
+    }
+    .progress-line {
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(45deg, #fda099, #fb4d92);
+      border-radius: 10rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    span, .labels{
+      font-weight: 700;
+    }
+    .tip span {
+      color: #000;
+      font-size: 3rem;
+    }
+    .tip {
+      z-index: 1;
+      position: absolute;
+      background-color: #fff;
+      color: #90939a;
+      font-size: 1rem;
+      border-radius: .7rem; 
+      padding: 1rem 2rem;  
+      bottom: -3rem;
+
+
+    }
+    
+
+    .actions, section {
+      filter: drop-shadow(0 1rem 5rem rgba(0, 0, 0, 0.4));
+      margin-top: 2rem;
+      margin-bottom: 2rem ;
+    }
+    
+     @media (min-width: 830px) {
+       
+      body {      
+      background: url('../images/bg-desktop.svg') no-repeat  #0c122c;
+      background-position: center bottom;
+      background-size: 100% 50vh;
+    }
+      .container {
+        width: 65%;
+        height: 30%;
+        display: grid;
+        grid-template-columns: 40% 55%;
+        grid-gap: 3rem;
+        align-items: end;
+      }
+      section {
+        width: 100%;
+        height: 100%;
+      }
+      .storage {
+        position: absolute;
+        bottom: 0;
+      }
+      .tip:after{
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-top: 1.5rem solid transparent;
+      border-right: 1.5rem solid #fff;
+      border-bottom: 1.5rem solid transparent;
+      border-left: 1.5rem solid transparent;
+      position: absolute;
+      bottom: -1.5rem;
+      right: 0;
+      }
+      .actions {
+      height: 100%;
+      padding: 0 9.5rem 0 3rem;
+      }
+      .tip{
+        bottom: auto;
+        top: 0;
+        right: 2.8rem;
+      }
+     
+     }
